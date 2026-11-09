@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COTS 1 ProWeb - Dashboard Pengelolaan Surat</title>
+    <link rel="stylesheet" href="cots.css">
+</head>
+<body>
+
+    <!-- Header Atas -->
+    <div class="top-header">
+        <div>COTS 1 ProWeb</div>
+        <div>Hi, [103092400019 - Hilmy]</div>
+    </div>
+
+    <!-- Checkbox Tersembunyi untuk Kontrol Buka-Tutup Sidebar (Pure CSS) -->
+    <input type="checkbox" id="toggle-sidebar" class="sidebar-checkbox">
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <div class="toolbar-left">
+            <label for="toggle-sidebar" class="btn-toggle">
+                <img src="ICONS/kotak-masuk-abu.svg" alt="Incoming Letter" class="btn-icon">
+                Incoming Letter
+            </label>
+            <button type="button">
+                <img src="ICONS/folder-abu.svg" alt="My Folder" class="btn-icon">
+                My Folder
+            </button>
+        </div>
+        <div class="toolbar-right">
+            <input type="text" placeholder="Search ...">
+            <button type="submit">
+                <img src="ICONS/cari-abu-gelap.svg" alt="Search" class="btn-icon">
+            </button>
+        </div>
+    </div>
+
+    <!-- Layout Utama -->
+    <div class="main-container">
+        
+        <!-- Sidebar Incoming Letter -->
+        <div class="sidebar">
+            <div class="sidebar-header">Incoming Letter</div>
+            <div class="sidebar-body">
+                
+                <!-- Item Surat 1 -->
+                <div class="letter-item" tabindex="0">
+                    <div class="letter-icon">
+                        <img src="ICONS/surat-abu-muda.svg" alt="Surat">
+                    </div>
+                    <div class="letter-details">
+                        <div class="letter-header-row">
+                            <span class="sender-name">Direktur Pusat Teknologi<br>Informasi TELKOM<br>UNIVERSITY</span>
+                            <span class="letter-date">14 Oct<br>14:11</span>
+                        </div>
+                        <div class="letter-subject">Tindak Lanjut Permohonan<br>Perubahan Dosen Wali</div>
+                    </div>
+                </div>
+
+                <!-- Item Surat 2 -->
+                <div class="letter-item" tabindex="0">
+                    <div class="letter-icon">
+                        <img src="ICONS/surat-abu-muda.svg" alt="Surat">
+                    </div>
+                    <div class="letter-details">
+                        <div class="letter-header-row">
+                            <span class="sender-name">Kepala Bagian Admisi<br>Internasional Telkom<br>Universirty</span>
+                            <span class="letter-date">14 Oct<br>11:26</span>
+                        </div>
+                        <div class="letter-subject">Undangan Koordinasi Registrasi<br>Mahasiswa Asing</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Area Konten Utama Dashboard -->
+        <div class="content-area">
+            
+            <div class="dashboard-tab-container">
+                <div class="dashboard-tab">Dashboard</div>
+            </div>
+
+            <div class="action-buttons">
+                <button type="button">
+                    <img src="ICONS/dokumen-abu.svg" alt="Create Letter" class="btn-icon">
+                    Create Internal Letter
+                </button>
+                <button type="button">
+                    <img src="ICONS/dokumen-abu.svg" alt="Create Letter" class="btn-icon">
+                    Create External Letter
+                </button>
+                <button type="button">
+                    <img src="ICONS/dokumen-abu.svg" alt="Create Letter" class="btn-icon">
+                    Create Invitational Letter
+                </button>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card card-green">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="ICONS/kotak-masuk-putih.svg" alt="Need Follow Up" class="large-icon">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-number">0</div>
+                            <div class="card-label">Need Follow Up</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span>View Details</span>
+                        <div class="footer-icon">
+                            <img src="ICONS/panah-hijau.svg" alt="Details" class="small-icon">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-blue">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="ICONS/dokumen-putih.svg" alt="Incoming Letter" class="large-icon">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-number">0</div>
+                            <div class="card-label">Incoming Letter</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span>View Details</span>
+                        <div class="footer-icon">
+                            <img src="ICONS/panah-biru.svg" alt="Details" class="small-icon">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-red">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <img src="ICONS/percakapan-putih.svg" alt="Disposition" class="large-icon">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-number">0</div>
+                            <div class="card-label">Disposition</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span>View Details</span>
+                        <div class="footer-icon">
+                            <img src="ICONS/panah-merah.svg" alt="Details" class="small-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="todo-panel">
+                <div class="todo-title">Todo</div>
+                <div class="todo-search">
+                    <input type="text" placeholder="Search todo...">
+                    <button type="submit">
+                        <img src="ICONS/cari-abu-gelap.svg" alt="Search Todo" class="btn-icon">
+                    </button>
+                </div>
+            </div>
+            <div class="todo-content">
+                You don't have ToDo
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

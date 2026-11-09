@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.sidebar-checkbox {
+    display: none;
+}
+
+.top-header {
+    background-color: #dcdcdc;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #bfbfbf;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.toolbar {
+    background-color: #ffffff;
+    padding: 6px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.toolbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar-left button,
+.btn-toggle {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    margin-right: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #444;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+}
+
+.toolbar-left button:hover,
+.btn-toggle:hover {
+    background-color: #e9e9e9;
+}
+
+.toolbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar-right input {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+    outline: none;
+    font-size: 12px;
+}
+
+.toolbar-right button {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Layout Utama */
+.main-container {
+    display: flex;
+    padding: 12px;
+    gap: 15px;
+    overflow-x: hidden;
+}
+
+/* Sidebar & Animasi Toggle (Pure CSS) */
+.sidebar {
+    width: 300px;
+    background-color: #f7f7f7;
+    border-right: 1px solid #d5d5d5;
+    flex-shrink: 0;
+    min-height: 520px;
+    transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+    margin-left: 0;
+    opacity: 1;
+}
+
+.sidebar-checkbox:checked ~ .main-container .sidebar {
+    margin-left: -315px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-header {
+    background-color: #404040;
+    color: #ffffff;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.sidebar-body {
+    background-color: #ffffff;
+}
+
+.letter-item {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 12px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.letter-item:hover {
+    background-color: #f2f4f7;
+}
+
+.letter-item:active {
+    background-color: #e5e8ec;
+}
+
+.letter-icon {
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+
+.letter-icon img {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+.letter-details {
+    flex-grow: 1;
+}
+
+.letter-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.sender-name {
+    font-weight: bold;
+    font-size: 11.5px;
+    color: #333333;
+    line-height: 1.25;
+}
+
+.letter-date {
+    font-size: 10.5px;
+    color: #888888;
+    text-align: right;
+    line-height: 1.2;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.letter-subject {
+    font-size: 11px;
+    color: #666666;
+    margin-top: 4px;
+    line-height: 1.3;
+}
+
+/* Area Konten Utama */
+.content-area {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.dashboard-tab-container {
+    border-bottom: 2px solid #ff6600;
+    margin-bottom: 12px;
+}
+
+.dashboard-tab {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #ffffff;
+    padding: 6px 16px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.action-buttons button {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 11px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #444;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Kartu Ringkasan */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.card {
+    border-radius: 3px;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.card-body {
+    padding: 15px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-info {
+    text-align: right;
+}
+
+.card-number {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.card-label {
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.card-footer {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.footer-icon {
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-green { background-color: #27ae60; }
+.card-green .card-footer { color: #27ae60; }
+
+.card-blue { background-color: #3498db; }
+.card-blue .card-footer { color: #3498db; }
+
+.card-red { background-color: #e74c3c; }
+.card-red .card-footer { color: #e74c3c; }
+
+/* Panel Todo */
+.todo-panel {
+    background-color: #6f42c1;
+    padding: 10px 12px;
+    border-radius: 3px 3px 0 0;
+}
+
+.todo-title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.todo-search {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.todo-search input {
+    width: 100%;
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.todo-search button {
+    background-color: #ffffff;
+    border: none;
+    padding: 0 10px;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-content {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 20px;
+    text-align: center;
+    color: #555;
+    font-style: italic;
+    font-size: 12px;
+    border-radius: 0 0 3px 3px;
+}
+
+.btn-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+.large-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.small-icon {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+}
